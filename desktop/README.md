@@ -48,6 +48,8 @@ Pick one of the three options:
 The workflow lives at [`.github/workflows/build-desktop.yml`](../.github/workflows/build-desktop.yml)
 and runs the exact same steps as the scripts below on a clean cloud runner.
 
+> Run it here: **[Actions → Build Desktop App](https://github.com/gaosichun888/llm-graph-builder/actions/workflows/build-desktop.yml)** → *Run workflow* → pick `windows`.
+
 ### Option B — build locally with one command
 
 Prerequisites on the build machine (install once, internet required):
