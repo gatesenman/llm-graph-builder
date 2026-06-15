@@ -21,6 +21,14 @@ on:
           - linux
           - mac
           - all
+  # Also build Windows automatically whenever this workflow file itself changes
+  # on main (used to bootstrap the very first build). Normal code commits do not
+  # touch this file, so they won't trigger a build.
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/build-desktop.yml'
 
 concurrency:
   group: build-desktop-${{ github.ref }}-${{ github.event.inputs.platform }}
@@ -28,7 +36,7 @@ concurrency:
 
 jobs:
   windows:
-    if: ${{ github.event.inputs.platform == 'windows' || github.event.inputs.platform == 'all' }}
+    if: ${{ github.event_name == 'push' || github.event.inputs.platform == 'windows' || github.event.inputs.platform == 'all' }}
     runs-on: windows-latest
     timeout-minutes: 90
     env:
