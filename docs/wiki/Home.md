@@ -4,7 +4,7 @@
 
 ## 界面预览
 
-![主界面](../screenshots/llm-graph-builder-main.jpg)
+![主界面](../screenshots/frontend-main-zh.png)
 
 ## 核心流程
 
