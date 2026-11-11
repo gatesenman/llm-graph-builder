@@ -3,6 +3,8 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-green)
 ![React](https://img.shields.io/badge/React-blue)
 
+**English** · [简体中文](README.zh-CN.md)
+
 
 Transform unstructured data (PDFs, DOCs, TXTs, YouTube videos, web pages, etc.) into a structured Knowledge Graph stored in Neo4j using the power of Large Language Models (LLMs) and the LangChain framework.
 
@@ -44,6 +46,14 @@ This application allows you to upload files from various sources (local machine,
    uvicorn score:app --reload
    ```
 
+
+## Screenshots
+
+Captured from the frontend dev server (`cd frontend && yarn && yarn run dev`) in headless Chromium, without a backend or Neo4j connection — so the file grid is empty:
+
+| Main view (English) | Connect to Neo4j |
+| --- | --- |
+| ![Main view](docs/screenshots/frontend-main-en.png) | ![Connect to Neo4j](docs/screenshots/frontend-connect-en.png) |
 
 ## Key Features
 
@@ -213,6 +223,18 @@ gcloud run deploy dev-backend \
 
 ---
 
+## Project Structure
+
+```
+backend/          FastAPI backend (score.py entry point, src/ extraction, chunking, QA, embeddings; requirements.txt, example.env)
+frontend/         React + TypeScript + Vite UI (Neo4j Needle design system), example.env, Dockerfile, nginx config
+desktop/          Electron desktop app that bundles and launches the backend and serves the built frontend offline
+docker-compose.yml  local deployment of backend + frontend
+docs/             architecture image, backend/frontend docs, wiki, screenshots
+experiments/, POC_Documents/, POC_Experiments/   notebooks and proof-of-concept material
+build-linux.sh, build-win.bat   desktop build helpers
+```
+
 ## For local llms (Ollama)
 1. Pull the docker image of ollama
    ```bash
@@ -352,7 +374,7 @@ You can deploy the backend and the frontend to Google Cloud Run using Cloud Buil
 - The `cloudbuild.yaml` file supports multiple environments (`main`, `staging`, `dev`) based on the branch name.
 - The frontend build and deployment steps are commented out by default. Uncomment them in `cloudbuild.yaml` if you wish to deploy the frontend as well.
 
-For more details, see the comments in [`cloudbuild.yaml`](cloudbuild.yaml).
+For more details, see the comments in `cloudbuild.yaml` (note: `cloudbuild.yaml` is not included in this repository; it comes from the upstream [neo4j-labs/llm-graph-builder](https://github.com/neo4j-labs/llm-graph-builder) project).
 
 ---
 
@@ -378,5 +400,13 @@ For any inquiries or support, feel free to raise [GitHub Issues][github-issues]
 [github-issues]: https://github.com/neo4j-labs/llm-graph-builder/issues
 [bloom-url]: https://workspace-preview.neo4j.io/workspace/explore?connectURL={CONNECT_URL}&search=Show+me+a+graph&featureGenAISuggestions=true&featureGenAISuggestionsInternal=true
 [langchain-endpoint]: https://api.smith.langchain.com
+
+## Contributing
+
+Issues and pull requests are welcome. For frontend changes run `yarn run lint` and `yarn run build` in `frontend/`; for backend changes make sure `uvicorn score:app` still starts with your `.env`.
+
+## License
+
+[Apache License 2.0](LICENSE)
 
 ## Happy Graph Building!
