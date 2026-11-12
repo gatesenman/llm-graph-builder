@@ -180,5 +180,4 @@ startupfrontend.sh
 /backend/local_model
 /crab
 
-.venv/
 node_modules/
