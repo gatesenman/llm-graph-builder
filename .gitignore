@@ -179,3 +179,5 @@ startupbackend.sh
 startupfrontend.sh
 /backend/local_model
 /crab
+
+node_modules/
