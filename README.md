@@ -8,6 +8,18 @@ Transform unstructured data (PDFs, DOCs, TXTs, YouTube videos, web pages, etc.) 
 
 This application allows you to upload files from various sources (local machine, GCS, S3 bucket, or web sources), choose your preferred LLM model, and generate a Knowledge Graph.
 
+## Offline graph preview
+
+Preview a local text file as graph JSON (nodes/edges) without Neo4j or a live LLM:
+
+```bash
+python -c "from pathlib import Path; from src.offline_preview import preview_file; print(preview_file(Path('tests/fixtures/sample_graph.txt')))"
+# from backend/
+python -m pytest tests/test_offline_preview.py
+```
+
+Existing Neo4j settings stay environment-based. Do not commit secrets. The license file is unchanged.
+
 ## 🖥️ 桌面版（一键离线）/ Desktop App
 
 想要**点开即用**？这里提供跨平台的一键桌面应用：双击启动即自动拉起内置后端并加载界面，运行环境**全部内置、首次启动无需联网**，界面**默认中文**（右上角可切 English），并内置「**系统设置**」面板，可在界面里直接配置大模型（含 OpenAI 兼容 / 自定义，如 **DeepSeek**、Kimi、智谱等）与系统选项。
