@@ -1,0 +1,4 @@
+Alice Chen is an engineer.
+Alice Chen works at Northwind Labs.
+Northwind Labs is a company.
+Bob Rivera reviewed the design in Berlin.
