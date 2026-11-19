@@ -19,3 +19,14 @@ body {
 .ndl-progress-bar-wrapper .ndl-header .ndl-heading::after{
   animation: none !important;
 }
+
+/* Keyboard focus for the Vite/MUI shell (WCAG 2.2 visible focus). */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #018bff;
+  outline-offset: 2px;
+}
