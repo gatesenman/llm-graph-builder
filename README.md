@@ -10,6 +10,10 @@ This application allows you to upload files from various sources (local machine,
 
 ## Offline graph preview
 
+Preview a local text file as graph JSON (nodes/edges) without Neo4j or a live LLM.
+
+![Offline graph preview from the bundled fixture](docs/screenshots/offline-preview.png)
+
 Preview a local text file as graph JSON (nodes/edges) without Neo4j or a live LLM:
 
 ```bash
