@@ -1,4 +1,6 @@
 # Knowledge Graph Builder
+
+[English](README.md) · [简体中文](README.zh-CN.md)
 ![Python](https://img.shields.io/badge/Python-yellow)
 ![FastAPI](https://img.shields.io/badge/FastAPI-green)
 ![React](https://img.shields.io/badge/React-blue)
