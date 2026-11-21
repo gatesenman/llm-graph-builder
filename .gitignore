@@ -179,3 +179,14 @@ startupbackend.sh
 startupfrontend.sh
 /backend/local_model
 /crab
+
+# Additional hygiene
+Thumbs.db
+.env.local
+.env.*.local
+node_modules/
+logs/
+.venv/
+coverage/
+!.env.example
+!.env.example.*
