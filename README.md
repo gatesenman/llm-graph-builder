@@ -14,10 +14,18 @@ This application allows you to upload files from various sources (local machine,
 
 想要**点开即用**？这里提供跨平台的一键桌面应用：双击启动即自动拉起内置后端并加载界面，运行环境**全部内置、首次启动无需联网**，界面**默认中文**（右上角可切 English），并内置「**系统设置**」面板，可在界面里直接配置大模型（含 OpenAI 兼容 / 自定义，如 **DeepSeek**、Kimi、智谱等）与系统选项。
 
-- 直接下载（Windows / Linux / macOS）：<https://github.com/gaosichun888/llm-graph-builder/releases/tag/v1.0.0-win>
+- Download: this repository (`gatesenman/llm-graph-builder`) has **no** GitHub Release. Do not use the old `gaosichun888/.../releases/tag/v1.0.0-win` link as a download for this repo. To package a desktop build, follow [`desktop/README.md`](desktop/README.md).
 - 构建方式、离线运行原理与系统设置说明：[`desktop/README.md`](desktop/README.md)
 
 > 桌面应用未内置 Neo4j 数据库，启动后在「连接到 Neo4j」对话框填入本地或 [Neo4j Aura](https://console.neo4j.io/)（免费版）实例即可。
+
+## Screenshots
+
+The image below is already in this repo at `docs/screenshots/llm-graph-builder-main.jpg`. It shows the product workbench with sample climate-report documents and a populated graph. It has no operating-system window chrome, and it is **not** a screenshot of a published Windows installer (this repo has no Release). An older caption that said the file list was empty because Neo4j was disconnected does **not** match this file, so that wording is not used here.
+
+![Workbench with sample graph](docs/screenshots/llm-graph-builder-main.jpg)
+
+*Product UI with sample data (climate-report fixture). Not a Windows install capture.*
 
 ## Getting Started
 

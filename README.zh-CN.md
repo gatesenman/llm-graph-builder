@@ -20,10 +20,11 @@
 
 ## 界面截图
 
-以下截图来自前端开发服务器（`cd frontend && yarn && yarn run dev`），用无头 Chromium 拍摄；未启动后端、未连接 Neo4j，因此文件列表为空：
+仓库中已有 `docs/screenshots/llm-graph-builder-main.jpg`。画面是带气候报告样例文档和已填充知识图谱的工作台，没有操作系统窗体边框，**不是**已发布 Windows 安装包的截图（本仓库目前没有 Release）。旧文案写「未连接 Neo4j、文件列表为空」，与此文件不符，已改正。
 
-| 主界面（中文） | 连接到 Neo4j |
-| --- | --- |
+![带样例图谱的工作台](docs/screenshots/llm-graph-builder-main.jpg)
+
+*产品界面（样例数据）。不是 Windows 安装后截图。*
 
 ## 快速开始
 
